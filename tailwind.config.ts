@@ -3,9 +3,9 @@ const {
 } = require("tailwindcss/lib/util/flattenColorPalette");
 import type { Config } from "tailwindcss";
 const config: Config = {
+  darkMode: "class",
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
-    darkMode: "class",
     extend: {
       screens: {
         xs: "425px",

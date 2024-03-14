@@ -1,3 +1,4 @@
+"use client";
 import MainTemplate from "@/template";
 import { ReactNode } from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
@@ -5,7 +6,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 const Providers = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <NextThemesProvider>
+      <NextThemesProvider attribute="class">
         <MainTemplate>{children}</MainTemplate>
       </NextThemesProvider>
     </>
