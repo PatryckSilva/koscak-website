@@ -19,7 +19,7 @@ export const AnimatedTooltip = ({
     text: string;
   }[];
 }) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number>(-1);
   const springConfig = { stiffness: 100, damping: 5 };
   const x = useMotionValue(0); // going to set this value on mouse move
   // rotate the tooltip
@@ -36,13 +36,17 @@ export const AnimatedTooltip = ({
     const halfWidth = event.target.offsetWidth / 2;
     x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
   };
-
   return (
     <>
       {items.map(item => (
-        <div className="flex justify-center w-full relative" key={item.id}>
-          <AnimatePresence mode="wait">
-            {hoveredIndex === item.id && (
+        <div
+          className="flex justify-center w-full relative"
+          key={item.id}
+          onMouseEnter={() => setHoveredIndex(item.id)}
+          onMouseLeave={() => setHoveredIndex(-1)}
+        >
+          {hoveredIndex === item.id && (
+            <AnimatePresence mode="wait">
               <motion.div
                 initial={{ opacity: 0, y: 20, scale: 0.6 }}
                 animate={{
@@ -70,13 +74,9 @@ export const AnimatedTooltip = ({
                 </div>
                 {/* <div className="text-white text-xs">{item.designation}</div> */}
               </motion.div>
-            )}
-          </AnimatePresence>
-          <div
-            onMouseEnter={() => setHoveredIndex(item.id)}
-            onMouseLeave={() => setHoveredIndex(null)}
-            className={`bg-black/95 p-5 rounded-full`}
-          >
+            </AnimatePresence>
+          )}
+          <div className={`bg-black/95 p-5 rounded-full`}>
             <span className={`text-5xl`}>{item.icon}</span>
           </div>
         </div>

@@ -12,7 +12,7 @@ export const Button = ({
   return (
     <button
       onClick={() => open(url)}
-      className={`bg-main_yellow/80 border-2 border-transparent hover:bg-main_yellow/70 text-white px-4 py-2 rounded-md transition-all active:scale-90`}
+      className={`bg-main_yellow/80 border-2 border-transparent hover:bg-main_yellow/70 text-slate-950 font-semibold px-4 py-2 rounded-md transition-all active:scale-90`}
     >
       {children}
     </button>
