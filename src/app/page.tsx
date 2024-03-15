@@ -1,4 +1,5 @@
-import { StartingFrame } from "@/components/layout/Home/StartingFrame";
+import IncentivationBar from "@/components/layout/Home/IncentivationBar";
+import StartingFrame from "@/components/layout/Home/StartingFrame";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <>
       <StartingFrame />
+      <IncentivationBar />
     </>
   );
 }

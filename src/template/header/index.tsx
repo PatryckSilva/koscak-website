@@ -9,7 +9,7 @@ const Header = () => {
     },
     {
       name: "Sobre o Autor",
-      link: "/about",
+      link: "/about?message=teste",
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
@@ -21,7 +21,7 @@ const Header = () => {
     },
   ];
   return (
-    <header className="relative  w-full">
+    <header className=" w-full">
       <FloatingNav navItems={navItems} />
     </header>
   );
