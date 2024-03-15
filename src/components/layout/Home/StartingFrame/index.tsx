@@ -5,6 +5,12 @@ import Image from "next/image";
 const StartingFrame = () => {
   return (
     <main className="h-[51rem] w-full dark:bg-slate-950 bg-white relative dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] flex items-center justify-center gap-56">
+      {/* <Spotlight className="-top-40 -right-[90rem] md:-top-40 " fill="white" /> */}
+      {/* <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      /> */}
+
       <article className={`max-w-[580px] flex flex-col gap-6`}>
         <h1
           className={`uppercase text-5xl text-main_yellow/80 leading-relaxed font-bold`}
@@ -43,13 +49,3 @@ const StartingFrame = () => {
 };
 
 export default StartingFrame;
-
-{
-  /* <Spotlight className="-top-40 -right-[90rem] md:-top-40 " fill="white" /> */
-}
-{
-  /* <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
-      /> */
-}
