@@ -27,7 +27,7 @@ const IncentivationBar = () => {
     },
   ];
   return (
-    <div className="flex flex-row items-center bg-main_yellow/80 justify-center mb-10 -mt-16 rounded-2xl z-10 w-[40%] max-h-[125px] p-5">
+    <div className="bg-main_yellow-400/80 z-10 -mt-10 mb-10 flex w-1/2 flex-col items-center justify-center gap-12 rounded-2xl p-5 md:max-h-[125px] md:w-4/5 md:flex-row lg:w-[60%] xl:-mt-16 xl:w-[50%] 2xl:w-[40%]">
       <AnimatedTooltip items={icons} />
     </div>
   );

@@ -12,7 +12,7 @@ export const Button = ({
   return (
     <button
       onClick={() => open(url)}
-      className={`bg-main_yellow/80 border-2 border-transparent hover:bg-main_yellow/70 text-slate-950 font-semibold px-4 py-2 rounded-md transition-all active:scale-90`}
+      className={`bg-main_yellow-400/80 rounded-md border-2 border-transparent px-3 py-2 font-semibold text-slate-950 transition-all hover:bg-main_yellow/70 active:scale-90 md:px-4`}
     >
       {children}
     </button>
@@ -29,7 +29,7 @@ export const ButtonOutlined = ({
   return (
     <button
       onClick={() => open(url)}
-      className={`bg-slate-950 border-2 border-main_yellow text-main_yellow px-4 py-2 rounded-md transition-all active:scale-90 active:bg-main_yellow/80 active:text-white`}
+      className={`border-main_yellow-400 text-main_yellow-400 active:bg-main_yellow-400/80 rounded-md border-2 bg-slate-950 px-3 py-2 transition-all active:scale-90 active:text-white md:px-4`}
     >
       {children}
     </button>

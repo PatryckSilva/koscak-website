@@ -3,7 +3,9 @@ import Header from "./header";
 
 const MainTemplate = ({ children }: { children: ReactNode }) => {
   return (
-    <div className={`min-h-screen w-screen flex flex-col items-center`}>
+    <div
+      className={`flex min-h-screen flex-col items-center overflow-x-hidden`}
+    >
       <Header />
       {children}
     </div>

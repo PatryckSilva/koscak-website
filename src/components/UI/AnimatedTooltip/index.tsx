@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
 import {
   motion,
@@ -8,7 +7,6 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-import type { IconType } from "react-icons";
 
 export const AnimatedTooltip = ({
   items,
@@ -40,7 +38,7 @@ export const AnimatedTooltip = ({
     <>
       {items.map(item => (
         <div
-          className="flex justify-center w-full relative"
+          className="relative flex w-full justify-center"
           key={item.id}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(-1)}
@@ -65,18 +63,18 @@ export const AnimatedTooltip = ({
                   rotate: rotate,
                   whiteSpace: "nowrap",
                 }}
-                className="absolute -top-14 -left-4/6 translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
+                className="-left-4/6 absolute -top-14 z-50 flex translate-x-1/2 flex-col items-center justify-center rounded-md bg-black px-4 py-2 text-xs shadow-xl"
               >
-                <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-[2px] " />
-                <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[2px] " />
-                <div className="font-bold text-white relative z-30 text-base">
+                <div className="absolute inset-x-10 -bottom-px z-30 h-[2px] w-[20%] bg-gradient-to-r from-transparent via-emerald-500 to-transparent " />
+                <div className="absolute -bottom-px left-10 z-30 h-[2px] w-[40%] bg-gradient-to-r from-transparent via-sky-500 to-transparent " />
+                <div className="relative z-30 text-base font-medium text-white">
                   {item.text}
                 </div>
                 {/* <div className="text-white text-xs">{item.designation}</div> */}
               </motion.div>
             </AnimatePresence>
           )}
-          <div className={`bg-black/95 p-5 rounded-full`}>
+          <div className={`rounded-full bg-black/95 p-5`}>
             <span className={`text-5xl`}>{item.icon}</span>
           </div>
         </div>
