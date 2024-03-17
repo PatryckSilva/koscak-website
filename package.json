@@ -10,6 +10,7 @@
     "format": "prettier --write src"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
     "@tabler/icons-react": "^3.0.2",
     "axios": "^1.6.7",
     "clsx": "^2.1.0",

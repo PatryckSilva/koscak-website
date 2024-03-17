@@ -1,5 +1,6 @@
 import IncentivationBar from "@/components/layout/Home/IncentivationBar";
 import StartingFrame from "@/components/layout/Home/StartingFrame";
+import { VideoFrame } from "@/components/layout/Home/VideoFrame";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export default function Home() {
     <>
       <StartingFrame />
       <IncentivationBar />
+      <VideoFrame />
     </>
   );
 }

@@ -38,3 +38,10 @@ body {
     1px -1px #000,
     -1px 1px #000;
 }
+.main_btn {
+  @apply rounded-md border-2 border-transparent bg-main_yellow-400/80 px-3 py-2 font-semibold text-slate-950 transition-all hover:bg-main_yellow-400/70 active:scale-90 md:px-4;
+}
+
+.main_btn_outlined {
+  @apply rounded-md border-2 border-main_yellow-400 bg-slate-950 px-3 py-2 text-main_yellow-400 transition-all active:scale-90 active:bg-main_yellow-400/80 active:text-white md:px-4;
+}

@@ -6,9 +6,9 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { ThemeSwitch } from "../ThemeSwitch";
+import { cn } from "@/lib/utils";
 
 export const FloatingNav = ({
   navItems,
@@ -51,7 +51,7 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "border-main_yellow-400/80 fixed inset-x-0 top-5 z-[9999] mx-auto flex max-w-fit items-center justify-center space-x-4 rounded-xl border-2 bg-white px-4 py-3 shadow-lg  shadow-black/85 dark:bg-slate-950 lg:top-10",
+          "fixed inset-x-0 top-5 z-[9999] mx-auto flex max-w-fit items-center justify-center space-x-4 rounded-xl border-2 border-main_yellow-400/80 bg-white px-4 py-3 shadow-lg  shadow-black/85 dark:bg-slate-950 lg:top-10",
           className,
         )}
       >

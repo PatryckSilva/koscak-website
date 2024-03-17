@@ -14,7 +14,7 @@ const StartingFrame = () => {
         className={`flex flex-col items-center gap-5 md:max-w-[580px] lg:items-start`}
       >
         <h1
-          className={` text_shadow text-main_yellow-400/80 text-nowrap text-center text-[22px] font-bold uppercase md:text-left md:text-4xl`}
+          className={` text_shadow text-nowrap text-center text-[22px] font-bold uppercase text-main_yellow-400/80 md:text-left md:text-4xl`}
         >
           O Homem que Odiava a Verdade
         </h1>
