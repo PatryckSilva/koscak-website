@@ -1,5 +1,6 @@
 import IncentivationBar from "@/components/layout/Home/IncentivationBar";
 import StartingFrame from "@/components/layout/Home/StartingFrame";
+import { TestimonialsFrame } from "@/components/layout/Home/TestimonialsFrame";
 import { VideoFrame } from "@/components/layout/Home/VideoFrame";
 import { Metadata } from "next";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <StartingFrame />
       <IncentivationBar />
       <VideoFrame />
+      <TestimonialsFrame />
     </>
   );
 }
