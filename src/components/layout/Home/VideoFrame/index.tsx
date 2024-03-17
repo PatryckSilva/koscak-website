@@ -36,7 +36,7 @@ export const VideoFrame = () => {
         <video
           ref={videoRef as RefObject<HTMLVideoElement>}
           src="/videos/chamada-livro.mp4"
-          className={`h-[607px] w-[1080px] overflow-hidden rounded-2xl`}
+          className={` h-[197px] w-[350px] overflow-hidden rounded-2xl xs:h-[225px] xs:w-[400px] sm:h-[281px] sm:w-[500px] md:h-[365px] md:w-[650px] lg:h-[506px] lg:w-[900px] xl:h-[607px] xl:w-[1080px]`}
           controls
         >
           Seu Navegador não suporta videos
@@ -46,7 +46,7 @@ export const VideoFrame = () => {
         <section className={`flex h-full w-full items-center justify-center`}>
           <video
             src="/videos/chamada-livro.mp4"
-            className={`h-[607px] w-[1080px] overflow-hidden rounded-2xl`}
+            className={` h-[197px] w-[350px] overflow-hidden rounded-2xl xs:h-[225px] xs:w-[400px] sm:h-[281px] sm:w-[500px] md:h-[365px] md:w-[650px] lg:h-[506px] lg:w-[900px] xl:h-[607px] xl:w-[1080px]`}
             controls
             autoPlay
           >
