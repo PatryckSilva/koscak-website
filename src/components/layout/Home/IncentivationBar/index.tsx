@@ -31,7 +31,7 @@ const IncentivationBar = () => {
       {icons.map(item => (
         <>
           <AnimatedTooltip item={item} />
-          <span className={`text-center text-base text-[#ecf0f1]`}>
+          <span className={`text-center text-base text-[#ecf0f1] md:hidden`}>
             {item.text}
           </span>
         </>
