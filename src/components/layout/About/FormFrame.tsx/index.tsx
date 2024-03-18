@@ -58,7 +58,7 @@ export function FormFrame() {
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="lastname">Quero saber mais sobre: </Label>
-          <SelectOptions>
+          <SelectOptions onChange={e => console.log(e.target.value)}>
             {options.map((option: { label: string; value: string }) => (
               <option key={option.value} value={option.value}>
                 {option.label}

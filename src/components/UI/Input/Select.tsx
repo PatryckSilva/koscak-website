@@ -1,9 +1,10 @@
 import { forwardRef, useState } from "react";
-import { InputProps } from ".";
 import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+export interface SelectProps
+  extends React.SelectHTMLAttributes<HTMLSelectElement> {}
 
-const SelectOptions = forwardRef<HTMLSelectElement, InputProps>(
+const SelectOptions = forwardRef<HTMLSelectElement, SelectProps>(
   ({ className, children, ...props }, ref) => {
     const radius = 100; // change this to increase the rdaius of the hover effect
     const [visible, setVisible] = useState(false);
