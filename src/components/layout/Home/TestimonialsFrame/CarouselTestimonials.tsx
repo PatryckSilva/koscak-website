@@ -22,7 +22,7 @@ export const CarouselTestimonials = () => {
     },
   };
   return (
-    <section className="shadow_over_testimonials -mt-0 md:mt-0">
+    <section className="shadow_over_testimonials ">
       <Carousel
         plugins={[
           {
