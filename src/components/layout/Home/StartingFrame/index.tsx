@@ -14,12 +14,12 @@ const StartingFrame = () => {
         className={`flex flex-col items-center gap-5 md:max-w-[580px] lg:items-start`}
       >
         <h1
-          className={` text_shadow text-nowrap text-center text-[22px] font-bold uppercase text-main_yellow-400/80 md:text-left md:text-4xl`}
+          className={` text_shadow  text-center text-2xl font-bold uppercase text-main_yellow-400/80 md:text-left md:text-4xl`}
         >
           O Homem que Odiava a Verdade
         </h1>
         <section
-          className={`flex w-[320px] flex-col gap-4 text-center text-sm leading-7 md:w-[530px] md:text-lg lg:text-left`}
+          className={`flex w-[320px] flex-col gap-4 text-left text-sm leading-7 md:w-[530px] md:text-lg`}
         >
           <span>
             Paulo Isidoro Koscak cria uma narrativa intrigante e emocionante,

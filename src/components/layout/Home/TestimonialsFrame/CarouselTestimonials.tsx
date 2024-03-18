@@ -64,7 +64,7 @@ export const CarouselTestimonials = () => {
               {
                 resolve: slidesToShowPlugin,
                 options: {
-                  numberOfSlides: 2.5,
+                  numberOfSlides: 2.3,
                 },
               },
               arrowOptions,
@@ -112,7 +112,7 @@ export const CarouselTestimonials = () => {
               {
                 resolve: slidesToShowPlugin,
                 options: {
-                  numberOfSlides: 2,
+                  numberOfSlides: 2.4,
                 },
               },
               arrowOptions,
@@ -180,9 +180,9 @@ const CarouselLeftArrow = () => {
   const position = ``;
   return (
     <button
-      className={` transition_time absolute !z-[99] active:translate-y-2 ${position}`}
+      className={` absolute !z-[99] rounded-full text-[#acadb9] transition-all active:translate-y-2 active:bg-white/20`}
     >
-      <MdOutlineKeyboardArrowLeft color="#82838A" size={40} />
+      <MdOutlineKeyboardArrowLeft size={40} />
     </button>
   );
 };
@@ -190,9 +190,9 @@ const CarouselRightArrow = () => {
   const position = `right-0`;
   return (
     <button
-      className={` transition_time absolute !z-[99] active:translate-y-2 ${position}`}
+      className={`absolute !z-[99] rounded-full text-[#acadb9] transition-all active:translate-y-2 active:bg-white/20 ${position} mt-0.5`}
     >
-      <MdOutlineKeyboardArrowRight color="#82838A" size={40} />
+      <MdOutlineKeyboardArrowRight size={40} />
     </button>
   );
 };

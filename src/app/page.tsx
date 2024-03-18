@@ -1,4 +1,5 @@
 import IncentivationBar from "@/components/layout/Home/IncentivationBar";
+import { PolitcaText } from "@/components/layout/Home/Politica";
 import StartingFrame from "@/components/layout/Home/StartingFrame";
 import { TestimonialsFrame } from "@/components/layout/Home/TestimonialsFrame";
 import { VideoFrame } from "@/components/layout/Home/VideoFrame";
@@ -16,6 +17,7 @@ function Home() {
       <IncentivationBar />
       <VideoFrame />
       <TestimonialsFrame />
+      <PolitcaText />
     </>
   );
 }
