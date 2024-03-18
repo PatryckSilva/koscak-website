@@ -145,10 +145,10 @@ export const CarouselTestimonials = () => {
           },
         }}
       >
-        {DATA_TESTIMONIALS.map((item, index) => (
+        {DATA_TESTIMONIALS.map(item => (
           <div
-            key={index}
-            className={`flex h-[314px] w-[350px] flex-col items-start justify-center gap-5 rounded-[20px] bg-white px-8 py-4`}
+            key={item.id}
+            className={`flex h-[350px] w-[350px] flex-col items-start justify-start gap-5 rounded-2xl bg-main_blue-950 p-5 bg-grid-small-black/[0.2] dark:bg-grid-small-white/[0.2]`}
           >
             <div className={`flex items-center gap-2`}>
               <aside
@@ -163,10 +163,13 @@ export const CarouselTestimonials = () => {
               </aside>
               <aside className={`flex flex-col items-start`}>
                 <span className={`font-bold text-white`}>{item.nome}</span>
-                <span className={`text-sm text-[#A9B5C1]`}>{item.cargo}</span>
               </aside>
             </div>
-            <span className={`text-sm text-[#A9B5C1]`}>{item.depoimento}</span>
+            <span
+              className={`h-[174px] text-[#cfdae4] ${item.id === 0 ? "text-xs" : "text-sm"}`}
+            >
+              {item.depoimento}
+            </span>
           </div>
         ))}
       </Carousel>

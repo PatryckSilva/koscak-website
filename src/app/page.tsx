@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Welcome to your Next.js site!",
 };
 
-export default function Home() {
+function Home() {
   return (
     <>
       <StartingFrame />
@@ -19,3 +19,4 @@ export default function Home() {
     </>
   );
 }
+export default Home;

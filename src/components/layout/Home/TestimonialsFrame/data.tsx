@@ -1,54 +1,58 @@
 export const DATA_TESTIMONIALS = [
   {
+    id: 0,
     photo: "/images/testimonials/ana.webp",
-    nome: "Carolina Bessa",
-    cargo: "COO e sócia na Lab Culture",
+    nome: "Ana Júlia Celestino",
     depoimento: (
       <span>
-        Desde o início foram muito profissionais e atenciosos, sempre dispostos
-        a atender nossas demandas e oferecer soluções para nossos problemas.{" "}
-        <br /> O resultado final superou nossas expectativas e hoje temos um
-        muito bem estruturado, responsivo e que traz conversões incríveis.
+        Do fundo do meu coração, deixo a recomendação. Vai te prender demais,
+        principalmente porque você consegue ser leitor, personagem e narrador.
+        Você entra no livro de uma maneira que tudo está ao seu redor, dentro e
+        fora de você. Já tô puxando sardinha pro meu lado, olhem essa capa
+        maravilhosa, eu quem fiz. Recomendo à todos, me dava choquinhos de
+        ideias toda vez que parava de ler. A escrita fluida, personagens bem
+        construídos e um plot que me pegou desprevenida. Meus sinceros
+        agradecimentos pela oportunidade de ler e me aventurar nas páginas.
       </span>
     ),
   },
   {
+    id: 1,
     photo: "/images/testimonials/douglas.webp",
-    nome: "Robert Trusardi",
-    cargo: "Metasource Games, CEO",
+    nome: "Douglas Silva",
     depoimento: (
       <span>
-        Com a Apex Brasil construindo nosso site e contratos inteligentes, o
-        Castles NFT se tornou um dos 20 principais jogos de blockchain e um dos
-        40 principais aplicativos descentralizados. <br /> O CEO Victor Lopes é
-        uma das pessoas que mais trabalham em qualquer setor, seus resultados
-        falam muito!
+        Excelente leitura! Recomendo demais. Esse é um daqueles livros que não
+        dá para largar até o final! Sucesso!
       </span>
     ),
   },
   {
+    id: 2,
     photo: "/images/testimonials/adriana.webp",
-    nome: "Guilherme Amorim",
-    cargo: "90 TI - Chief Revenue Officer",
+    nome: "Adrian Horta",
     depoimento: (
       <span>
-        Trabalhar com a APEX é uma jornada leve e muito produtiva. O CEO Victor
-        conduz com maestria um time que faz entregas ágeis e surpreendentes.
-        <br /> O cuido em cada detalhe do projeto garantiu um design moderno e
-        uma excelente experiência ao navegar no nosso site.
+        É uma baita emoção ter na minha biblioteca o livro de um grande amigo.
+        Tô lendo aqui ansiosa por terminar e pelos próximos. Parabéns Paulo
+        Isidoro Koscak! Escrever sempre foi pros fortes. Hoje é pros muito
+        fortes.
       </span>
     ),
   },
   {
+    id: 3,
     photo: "/images/testimonials/katia.webp",
-    nome: "Guilherme Amorim",
-    cargo: "90 TI - Chief Revenue Officer",
+    nome: "Kátia Cristina",
     depoimento: (
       <span>
-        Trabalhar com a APEX é uma jornada leve e muito produtiva. O CEO Victor
-        conduz com maestria um time que faz entregas ágeis e surpreendentes.
-        <br /> O cuido em cada detalhe do projeto garantiu um design moderno e
-        uma excelente experiência ao navegar no nosso site.
+        Paulo Isidoro Koscak escreveu um envolvente suspense policial. As
+        descrições são incríveis e te transportam para cenas impensáveis. Além
+        de ficar num misto de expectativa e torcida você termina o livro apegado
+        aos personagens . O final, como todo o bom livre de suspense, é
+        surpreendente. Vale a pena cada minuto dedicado a esta leitura. No fim é
+        possível perceber certas características psicológicas do autor, como os
+        3 Ps : perversão, perversidade e uma pitada de psicopatia
       </span>
     ),
   },
