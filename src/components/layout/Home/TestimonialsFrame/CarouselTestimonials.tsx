@@ -151,16 +151,16 @@ export const CarouselTestimonials = () => {
             className={`flex h-[350px] w-[350px] flex-col items-start justify-start gap-5 rounded-2xl bg-main_blue-950/80 p-5 bg-grid-small-black/[0.2] dark:bg-grid-small-white/[0.2]`}
           >
             <div className={`flex items-center gap-2`}>
-              <aside
-                className={`relative h-12 w-12 overflow-hidden rounded-full`}
+              <figure
+                className={`relative size-12 overflow-hidden rounded-full`}
               >
                 <Image
-                  src={item.photo}
                   alt={item.nome}
-                  objectFit={"contain"}
-                  layout={"fill"}
+                  src={item.photo}
+                  width={48}
+                  height={48}
                 />
-              </aside>
+              </figure>
               <aside className={`flex flex-col items-start`}>
                 <span className={`font-bold text-white`}>{item.nome}</span>
               </aside>
