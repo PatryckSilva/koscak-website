@@ -83,10 +83,6 @@ body {
     -1px 1px #000;
 }
 
-.main_btn {
-  @apply rounded-md border-2 border-transparent bg-main_yellow-400/80 px-3 py-2 font-semibold text-slate-950 transition-all hover:bg-main_yellow-400/70 active:scale-90  md:px-4;
-}
-
 .main_btn_outlined {
   @apply rounded-md border-2 border-main_yellow-400 bg-slate-950 px-3 py-2 text-main_yellow-400 transition-all hover:!bg-main_yellow-300/10 active:scale-90 active:bg-main_yellow-400/80 active:text-white md:px-4;
 }
@@ -123,5 +119,86 @@ body {
   .shadow_over_testimonials:after {
     right: -60px;
     background: linear-gradient(to right, transparent, #020617);
+  }
+}
+
+.button_clickme {
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  letter-spacing: 2px;
+  @apply rounded-md border-2 border-main_yellow-400 bg-slate-950 px-3 py-2 text-main_yellow-400 transition-all hover:!bg-main_yellow-300/10 active:scale-90 active:bg-main_yellow-400/80 active:text-white md:px-4;
+}
+
+.button-parrot .parrot {
+  position: absolute;
+  width: 60px;
+  text-align: center;
+  animation: blink 0.8s infinite;
+  color: transparent;
+}
+
+.button-parrot .parrot:before {
+  content: "Compre agora";
+}
+
+.button-parrot .parrot:nth-child(1) {
+  top: -30px;
+  left: -40px;
+
+  transform: rotate(-20deg);
+  animation-duration: 0.5s;
+}
+
+.button-parrot .parrot:nth-child(2) {
+  right: -40px;
+  top: -20px;
+  transform: rotate(15deg);
+  animation-duration: 0.3s;
+}
+
+.button-parrot .parrot:nth-child(3) {
+  top: -60px;
+  left: 15px;
+  transform: rotate(10deg);
+  animation-duration: 1s;
+}
+
+.button-parrot .parrot:nth-child(4) {
+  top: -70px;
+  left: 95px;
+  transform: rotate(2deg);
+  animation-duration: 0.7s;
+}
+
+.button-parrot .parrot:nth-child(5) {
+  top: 80px;
+  left: 105px;
+  transform: rotate(-20deg);
+  animation-duration: 0.8s;
+}
+
+.button-parrot .parrot:nth-child(6) {
+  top: 80px;
+  left: 5px;
+  transform: rotate(10deg);
+  animation-duration: 1.2s;
+}
+
+.button-parrot button:hover .parrot:before {
+  content: "Clique";
+  width: 70px;
+}
+
+@keyframes blink {
+  25%,
+  75% {
+    color: transparent;
+  }
+
+  40%,
+  60% {
+    color: #fff;
   }
 }

@@ -1,7 +1,5 @@
-import { Button } from "@/components/UI/Buttons";
-import { EbookAndPhysicalURL } from "@/utils/constants";
-
 import { CarouselTestimonials } from "./CarouselTestimonials";
+import { TestimonialsFrameButtons } from "../HomeButtons";
 
 export const TestimonialsFrame = () => {
   return (
@@ -21,9 +19,7 @@ export const TestimonialsFrame = () => {
           história
         </span>
 
-        <section className={`flex items-end gap-4 xl:self-end`}>
-          <Button url={EbookAndPhysicalURL}>Compre já!</Button>
-        </section>
+        <TestimonialsFrameButtons />
       </article>
       <CarouselTestimonials />
     </section>

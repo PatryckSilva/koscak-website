@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const About: NextPage = () => {
   return (
-    <main className="relative flex min-h-dvh w-full flex-col items-center justify-center gap-0 bg-white py-24 bg-grid-small-black/[0.2] dark:bg-slate-950 dark:bg-grid-small-white/[0.2]  md:py-24">
+    <main className="relative flex min-h-dvh w-full flex-col items-center justify-center  bg-white py-24 bg-grid-small-black/[0.2] dark:bg-slate-950 dark:bg-grid-small-white/[0.2]  ">
       <article
         className={`flex w-full max-w-5xl flex-col items-center px-8 text-center lg:items-start`}
       >
@@ -20,7 +20,7 @@ const About: NextPage = () => {
         </span>
       </article>
       <CardsFrame />
-      <nav className={`flex w-full max-w-5xl justify-between`}>
+      <nav className={`flex w-full max-w-5xl justify-between px-5`}>
         <Link
           href={"/"}
           className={`text-main_yellow-400 underline hover:text-main_yellow-400/80`}

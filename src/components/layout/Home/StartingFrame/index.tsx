@@ -1,6 +1,5 @@
-import { Button, ButtonOutlined } from "@/components/UI/Buttons";
-import { EbookUrl, physicalBookUrl } from "@/utils/constants";
 import Image from "next/image";
+import { StartingFrameButtons } from "../HomeButtons";
 const StartingFrame = () => {
   return (
     <main className="relative flex min-h-dvh w-full flex-col-reverse items-center justify-center gap-9 bg-white py-20 bg-grid-small-black/[0.2] dark:bg-slate-950 dark:bg-grid-small-white/[0.2] md:min-h-[47rem] md:flex-col md:py-24 lg:flex-row xl:gap-56">
@@ -31,10 +30,7 @@ const StartingFrame = () => {
             caminhos serão apresentados aos nossos heróis.
           </span>
         </section>
-        <section className={`flex items-center gap-4`}>
-          <Button url={physicalBookUrl}>Compre o livro físico</Button>
-          <ButtonOutlined url={EbookUrl}>Compre o Ebook</ButtonOutlined>
-        </section>
+        <StartingFrameButtons />
       </article>
       <figure className="relative z-[2] h-[283px] w-[200px] shadow-lg shadow-[#1e1d1d] md:h-[428px] md:w-[303px]">
         <Image src="/images/book.webp" alt="Next.js Logo" fill={true} />

@@ -27,7 +27,7 @@ export function FormFrame() {
     console.log("Form submitted");
   };
   return (
-    <section className="mx-auto w-full max-w-[350px] rounded-2xl bg-white p-4 shadow-input dark:bg-[#111827] xs:max-w-sm md:max-w-lg md:p-8">
+    <section className=" h-max w-full max-w-[350px] rounded-2xl bg-white p-4 shadow-input dark:bg-[#111827] xs:max-w-sm md:max-w-lg md:p-8">
       <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">
         Contato
       </h2>
@@ -36,7 +36,7 @@ export function FormFrame() {
         <br className={` md:hidden`} /> Deixe um recado para ele!
       </p>
 
-      <form className="my-8" onSubmit={handleSubmit}>
+      <form className="mt-8" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-6">
           <Label htmlFor="firstname">Seu nome</Label>
           <Input id="firstname" placeholder="Tyler" type="text" />
