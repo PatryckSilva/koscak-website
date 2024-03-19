@@ -3,14 +3,14 @@ import { PolitcaText } from "@/components/layout/Home/Politica";
 import StartingFrame from "@/components/layout/Home/StartingFrame";
 import { TestimonialsFrame } from "@/components/layout/Home/TestimonialsFrame";
 import { VideoFrame } from "@/components/layout/Home/VideoFrame";
-import { Metadata } from "next";
+import { Metadata, NextPage } from "next";
 
 export const metadata: Metadata = {
   title: "Homepage",
   description: "Welcome to your Next.js site!",
 };
 
-function Home() {
+const Home: NextPage = () => {
   return (
     <>
       <StartingFrame />
@@ -20,5 +20,5 @@ function Home() {
       <PolitcaText />
     </>
   );
-}
+};
 export default Home;
