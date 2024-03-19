@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -23,7 +23,7 @@ export const FloatingNav = ({
 }) => {
   const { scrollYProgress } = useScroll();
 
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", current => {
     if (typeof current === "number") {
@@ -35,6 +35,10 @@ export const FloatingNav = ({
       }
     }
   });
+
+  useEffect(() => {
+    setVisible(true);
+  }, []);
 
   return (
     <AnimatePresence mode="wait">
