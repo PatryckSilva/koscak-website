@@ -25,7 +25,7 @@ const About: NextPage = () => {
           href={"/"}
           className={`text-main_yellow-400 underline hover:text-main_yellow-400/80`}
         >
-          {"<"}Voltar para página inicial
+          {"<"}Página inicial
         </Link>
         <Link
           href={"/contact"}
