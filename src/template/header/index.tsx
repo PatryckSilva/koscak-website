@@ -5,18 +5,18 @@ const Header = () => {
     {
       name: "Home",
       link: "/",
-      icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconHome className="h-5 w-5 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Sobre o Autor",
       link: "/about?message=teste",
-      icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconUser className="h-5 w-5 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Contato",
       link: "/contact",
       icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <IconMessage className="h-5 w-5 text-neutral-500 dark:text-white" />
       ),
     },
   ];
