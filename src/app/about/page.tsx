@@ -1,5 +1,6 @@
 import { CardsFrame } from "@/components/layout/About/CardsFrame";
 import { Metadata, NextPage } from "next";
+import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description: "Learn more about the author of this site!",
@@ -19,6 +20,20 @@ const About: NextPage = () => {
         </span>
       </article>
       <CardsFrame />
+      <nav className={`flex w-full max-w-5xl justify-between`}>
+        <Link
+          href={"/"}
+          className={`text-main_yellow-400 underline hover:text-main_yellow-400/80`}
+        >
+          {"<"}Voltar para página inicial
+        </Link>
+        <Link
+          href={"/contact"}
+          className={`text-main_yellow-400 underline hover:text-main_yellow-400/80`}
+        >
+          Entre em Contato{">"}
+        </Link>
+      </nav>
     </main>
   );
 };

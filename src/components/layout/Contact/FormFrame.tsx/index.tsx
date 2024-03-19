@@ -82,18 +82,18 @@ export function FormFrame() {
           <BottomGradient />
         </button>
         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
-        <nav className={`flex w-full items-center justify-between`}>
+        <nav className={`flex w-full justify-between`}>
           <Link
             href={"/"}
-            className={`cursor-pointer text-yellow-400 underline transition-all hover:text-yellow-400/80`}
+            className={`text-main_yellow-400 underline hover:text-main_yellow-400/80`}
           >
-            Voltar para a Home!
+            {"<"}Voltar para página inicial
           </Link>
           <Link
-            href={"/about"}
-            className={`cursor-pointer text-yellow-400 underline transition-all hover:text-yellow-400/80`}
+            href={"/contact"}
+            className={`text-main_yellow-400 underline hover:text-main_yellow-400/80`}
           >
-            Conhecer o Autor
+            Conhecer o Autor{">"}
           </Link>
         </nav>
       </form>
