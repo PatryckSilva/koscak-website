@@ -90,7 +90,7 @@ export function FormFrame() {
             {"<"}Voltar para página inicial
           </Link>
           <Link
-            href={"/contact"}
+            href={"/about"}
             className={`text-main_yellow-400 underline hover:text-main_yellow-400/80`}
           >
             Conhecer o Autor{">"}
