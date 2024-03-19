@@ -75,7 +75,7 @@ export function FormFrame() {
           />
         </LabelInputContainer>
         <button
-          className="main_btn_outlined !w-full !bg-transparent hover:!bg-main_yellow-300/10"
+          className="main_btn_outlined !w-full !bg-transparent"
           type="submit"
         >
           Enviar
