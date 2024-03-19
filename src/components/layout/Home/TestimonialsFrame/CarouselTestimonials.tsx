@@ -148,7 +148,7 @@ export const CarouselTestimonials = () => {
         {DATA_TESTIMONIALS.map(item => (
           <div
             key={item.id}
-            className={`flex h-[350px] w-[350px] flex-col items-start justify-start gap-5 rounded-2xl bg-main_blue-950 p-5 bg-grid-small-black/[0.2] dark:bg-grid-small-white/[0.2]`}
+            className={`flex h-[350px] w-[350px] flex-col items-start justify-start gap-5 rounded-2xl bg-main_blue-950/80 p-5 bg-grid-small-black/[0.2] dark:bg-grid-small-white/[0.2]`}
           >
             <div className={`flex items-center gap-2`}>
               <aside
