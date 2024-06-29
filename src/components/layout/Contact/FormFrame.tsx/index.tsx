@@ -64,6 +64,7 @@ export function FormFrame() {
             type="text"
             {...register("name")}
           />
+          {errors.name && <ErrorText message={errors.name.message} />}
         </LabelInputContainer>
 
         <div className={`flex gap-5`}>
@@ -75,6 +76,7 @@ export function FormFrame() {
               type="email"
               {...register("email")}
             />
+            {errors.email && <ErrorText message={errors.email.message} />}
           </LabelInputContainer>
         </div>
 
@@ -97,7 +99,9 @@ export function FormFrame() {
             placeholder="Deixe sua mensagem aqui"
             type="text"
           />
+          {errors.message && <ErrorText message={errors.message.message} />}
         </LabelInputContainer>
+
         {showingConfirmation ? (
           <span className={`flex items-center justify-center gap-2`}>
             <ConfirmAnimation />
@@ -112,6 +116,7 @@ export function FormFrame() {
             <BottomGradient />
           </button>
         )}
+
         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
         <nav className={`flex w-full justify-between`}>
           <Link
@@ -152,5 +157,11 @@ const LabelInputContainer = ({
     <div className={cn("flex w-full flex-col space-y-2", className)}>
       {children}
     </div>
+  );
+};
+
+export const ErrorText = ({ message }: { message: string | undefined }) => {
+  return (
+    <span className="text-sm font-medium text-red-500">{message || ""}</span>
   );
 };
