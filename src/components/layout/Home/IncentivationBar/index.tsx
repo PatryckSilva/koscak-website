@@ -29,12 +29,12 @@ const IncentivationBar = () => {
   return (
     <div className="z-10 -mt-10 mb-10 flex w-1/2 flex-col items-center justify-center gap-8 rounded-2xl bg-main_blue-950/80 p-5 md:max-h-[125px] md:w-4/5 md:flex-row md:bg-main_yellow-400/80 lg:w-[60%] xl:-mt-16 xl:w-[50%] 2xl:w-[40%]">
       {icons.map(item => (
-        <>
+        <div key={item.id}>
           <AnimatedTooltip item={item} />
           <span className={`text-center text-base text-[#ecf0f1] md:hidden`}>
             {item.text}
           </span>
-        </>
+        </div>
       ))}
     </div>
   );
