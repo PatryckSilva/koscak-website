@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "../styles/globals.css";
 import "../styles/playbutton.css";
+import "../styles/confirmation-animation.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 import Providers from "@/providers";
 

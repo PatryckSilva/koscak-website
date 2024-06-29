@@ -1,31 +1,50 @@
 "use client";
 import React from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 import { Label } from "@/components/UI/Label";
 import { Input } from "@/components/UI/Input";
 import { cn } from "@/lib/utils";
 import { SelectOptions } from "@/components/UI/Input/Select";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { TcontactFormSchema, contactFormSchema } from "@/@types";
+import { postContact } from "./actions";
+import { ConfirmAnimation } from "@/components/UI/ConfirmAnimation";
 
 export function FormFrame() {
+  const [showingConfirmation, setShowingConfirmation] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);
   const options = [
-    {
-      label: "Livro O Homem que odiava a verdade",
-      value: "book",
-    },
-    {
-      label: "Standup comedy",
-      value: "standup",
-    },
-    {
-      label: "Canal Caramelo Total",
-      value: "caramelo",
-    },
+    "Livro O Homem que odiava a verdade",
+    "Standup comedy",
+    "Canal Caramelo Total",
   ];
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted");
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<TcontactFormSchema>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      email: "",
+      message: "",
+      name: "",
+      subject: options[0],
+    },
+  });
+
+  const handleSendForm = (data: TcontactFormSchema) => {
+    postContact({
+      formContact: data,
+      setShowingConfirmation,
+      setIsLoading,
+      reset,
+    });
   };
+
   return (
     <section className=" h-max w-full max-w-[350px] rounded-2xl bg-white p-4 shadow-input dark:bg-[#111827] xs:max-w-sm md:max-w-lg md:p-8">
       <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">
@@ -36,31 +55,35 @@ export function FormFrame() {
         <br className={` md:hidden`} /> Deixe um recado para ele!
       </p>
 
-      <form className="mt-8" onSubmit={handleSubmit}>
+      <form className="mt-8" onSubmit={handleSubmit(handleSendForm)}>
         <LabelInputContainer className="mb-6">
-          <Label htmlFor="firstname">Seu nome</Label>
-          <Input id="firstname" placeholder="Tyler" type="text" />
+          <Label htmlFor="name">Seu nome</Label>
+          <Input
+            id="name"
+            placeholder="Seu nome"
+            type="text"
+            {...register("name")}
+          />
         </LabelInputContainer>
+
         <div className={`flex gap-5`}>
           <LabelInputContainer className="mb-6">
             <Label htmlFor="email">Seu email </Label>
-            <Input id="email" placeholder="exemplo@exemplo.com" type="email" />
-          </LabelInputContainer>
-          <LabelInputContainer className="mb-6">
-            <Label htmlFor="lastname">Confirme seu email</Label>
             <Input
-              id="lastname"
+              id="email"
               placeholder="exemplo@exemplo.com"
-              type="text"
+              type="email"
+              {...register("email")}
             />
           </LabelInputContainer>
         </div>
+
         <LabelInputContainer className="mb-6">
           <Label htmlFor="lastname">Quero saber mais sobre: </Label>
-          <SelectOptions onChange={e => console.log(e.target.value)}>
-            {options.map((option: { label: string; value: string }) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
+          <SelectOptions {...register("subject")}>
+            {options.map((option: string) => (
+              <option key={option} value={option}>
+                {option}
               </option>
             ))}
           </SelectOptions>
@@ -69,18 +92,26 @@ export function FormFrame() {
         <LabelInputContainer className="mb-6">
           <Label htmlFor="message">Comentário ou Mensagem</Label>
           <Input
+            {...register("message")}
             id="message"
             placeholder="Deixe sua mensagem aqui"
             type="text"
           />
         </LabelInputContainer>
-        <button
-          className="main_btn_outlined !w-full !bg-transparent"
-          type="submit"
-        >
-          Enviar
-          <BottomGradient />
-        </button>
+        {showingConfirmation ? (
+          <span className={`flex items-center justify-center gap-2`}>
+            <ConfirmAnimation />
+            <span> Contato enviado com sucesso!</span>
+          </span>
+        ) : (
+          <button
+            className="main_btn_outlined !w-full !bg-transparent"
+            type="submit"
+          >
+            {isLoading ? "Enviando..." : "Enviar"}
+            <BottomGradient />
+          </button>
+        )}
         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
         <nav className={`flex w-full justify-between`}>
           <Link
