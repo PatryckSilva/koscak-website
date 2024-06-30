@@ -19,7 +19,7 @@ export const CarouselTestimonials = () => {
           <div className="embla__container">
             {duplicatingData.map(item => (
               <div
-                className={`embla__slide flex-[0_0_90%] xs:flex-[0_0_83%]  md:!flex-[0_0_50%] lg:!flex-[0_0_40%] 2xl:!flex-[0_0_32%]`}
+                className={`embla__slide flex flex-[0_0_90%] justify-center xs:flex-[0_0_83%] md:!flex-[0_0_50%] lg:!flex-[0_0_40%] 2xl:!flex-[0_0_32%]`}
                 key={item.id}
               >
                 <CarouselCard item={item} />

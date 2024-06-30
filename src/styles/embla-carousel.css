@@ -35,3 +35,38 @@
   gap: 0.6rem;
   align-items: center;
 }
+
+.shadow_over_testimonials {
+  @apply relative !flex h-[400px] w-full max-w-[1200px] items-center justify-center gap-5 overflow-hidden;
+}
+
+.shadow_over_testimonials:before,
+.shadow_over_testimonials:after {
+  @apply absolute top-0 h-full w-[100px] md:w-[250px];
+  content: "";
+  z-index: 2;
+}
+
+.shadow_over_testimonials:before {
+  left: -10px;
+  background: linear-gradient(to left, transparent, #020617);
+}
+
+@media (max-width: 768px) {
+  .shadow_over_testimonials:before {
+    left: -60px;
+    background: linear-gradient(to left, transparent, #020617);
+  }
+}
+
+.shadow_over_testimonials:after {
+  right: 0;
+  background: linear-gradient(to right, transparent, #020617);
+}
+
+@media (max-width: 768px) {
+  .shadow_over_testimonials:after {
+    right: -60px;
+    background: linear-gradient(to right, transparent, #020617);
+  }
+}

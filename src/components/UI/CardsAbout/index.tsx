@@ -23,7 +23,7 @@ export const CardsAbout = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 place-content-center gap-4 py-8 md:grid-cols-2 lg:grid-cols-3",
+        "grid grid-cols-1 place-content-center gap-4 py-8 lg:grid-cols-3",
         className,
       )}
     >
@@ -32,7 +32,7 @@ export const CardsAbout = ({
           href={item?.link}
           target="_blank"
           key={item?.link}
-          className="group relative block h-full w-full max-w-[320px] p-2"
+          className="group relative block h-max w-full max-w-[320px] p-2"
           onMouseEnter={() => setHoveredIndex(idx)}
           // onMouseLeave={() => setHoveredIndex(0)}
         >
@@ -82,7 +82,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "relative z-20 h-[400px] w-full overflow-hidden rounded-2xl border-2 border-transparent bg-slate-950/95 p-4 shadow-sm shadow-slate-700 group-hover:border-slate-700 ",
+        "relative z-20 w-full overflow-hidden rounded-2xl border-2 border-transparent bg-slate-950/95 p-4 shadow-sm shadow-slate-700 group-hover:border-slate-700 ",
         className,
       )}
     >
@@ -113,12 +113,7 @@ export const CardDescription = ({
   children: React.ReactNode;
 }) => {
   return (
-    <span
-      className={cn(
-        "text-sm leading-relaxed tracking-wide text-zinc-400",
-        className,
-      )}
-    >
+    <span className={cn("text-sm leading-relaxed text-zinc-400", className)}>
       {children}
     </span>
   );
