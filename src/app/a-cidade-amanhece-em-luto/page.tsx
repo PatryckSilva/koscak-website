@@ -1,4 +1,3 @@
-import { Tbook } from "@/@types";
 import IncentivationBar from "@/components/layout/Home/IncentivationBar";
 import { PolitcaText } from "@/components/layout/Home/Politica";
 import StartingFrame from "@/components/layout/Home/StartingFrame";
@@ -11,26 +10,26 @@ export const metadata: Metadata = {
   description: "Welcome to your Next.js site!",
 };
 
-const Home: NextPage = () => {
-  const book: Tbook = {
-    title: "O Homem que Odiava a Verdade",
+const aCidadeAmanheceEmLuto: NextPage = () => {
+  const book = {
+    title: "A cidade amanhece em luto",
     description: (
       <>
         <span>
-          Paulo Isidoro Koscak cria uma narrativa intrigante e emocionante, onde
-          somos inseridos em uma frenética investigação policial por diferentes
-          regiões de São Paulo.
+          Paulo Isidoro Koscak nos leva em uma intensa investigação policial em
+          A Cidade Amanhece em Luto, onde o detetive Bolacha enfrenta desafios e
+          intrigas em meio a uma cidade cheia de mistérios.
         </span>
+
         <span>
-          Vamos entrando no mundo dos personagens e curiosos por quais caminhos
-          serão apresentados aos nossos heróis.
+          A narrativa prende o leitor ao envolver rapidamente nos personagens e
+          na trama, cheia de ação, suspense e surpresas a cada passo.
         </span>
       </>
     ),
     link: "",
     image: "/images/book.webp",
   };
-
   return (
     <>
       <StartingFrame book={book} />
@@ -41,4 +40,5 @@ const Home: NextPage = () => {
     </>
   );
 };
-export default Home;
+
+export default aCidadeAmanheceEmLuto;
