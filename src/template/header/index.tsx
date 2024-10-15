@@ -1,6 +1,11 @@
 import { THeaderItems } from "@/@types";
 import { FloatingNav } from "@/components/UI/FloatingNav";
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import {
+  IconHome,
+  IconMessage,
+  IconUser,
+  IconBook2,
+} from "@tabler/icons-react";
 const Header = () => {
   const navItems: THeaderItems[] = [
     {
@@ -15,7 +20,7 @@ const Header = () => {
           link: "/a-cidade-amanhece-em-luto",
         },
       ],
-      icon: <IconHome className="h-5 w-5 text-neutral-500 dark:text-white" />,
+      icon: <IconBook2 className="h-5 w-5 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Sobre o Autor",

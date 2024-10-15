@@ -57,7 +57,7 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "fixed inset-x-0 top-5 z-[500] mx-auto flex max-w-fit items-center justify-center space-x-4 rounded-xl border-2 border-main_yellow-400/80 bg-white px-4 py-3 shadow-lg  shadow-black/85 dark:bg-slate-950 lg:top-10",
+          "fixed inset-x-0 top-5 z-[500] mx-auto flex max-w-fit items-center justify-center gap-5 rounded-xl border-2 border-main_yellow-400/80 bg-white px-4 py-3 shadow-lg shadow-black/85 dark:bg-slate-950 lg:top-10",
           className,
         )}
       >
@@ -65,15 +65,22 @@ export const FloatingNav = ({
           if (!navItem.link && navItem.content) {
             return (
               <DropdownMenu key={idx}>
-                <DropdownMenuTrigger>{navItem.name}</DropdownMenuTrigger>
+                <DropdownMenuTrigger className={`md:mr-2`}>
+                  <span className="block text-lg sm:hidden">
+                    {navItem.icon}
+                  </span>
+                  <span className="-mr-2 hidden sm:block">{navItem.name}</span>
+                </DropdownMenuTrigger>
                 <DropdownMenuContent
                   className={`z-[600] border-2 border-main_yellow-400/80`}
                 >
                   {navItem.content.map((contentItem, contentIndex) => (
-                    <Link key={contentIndex} href={contentItem.link}>
-                      <DropdownMenuItem
-                        className={`hover: hover:cursor-pointer`}
-                      >
+                    <Link
+                      key={contentIndex}
+                      href={contentItem.link}
+                      className={``}
+                    >
+                      <DropdownMenuItem className={``}>
                         {contentItem.name}
                       </DropdownMenuItem>
                     </Link>
@@ -88,7 +95,7 @@ export const FloatingNav = ({
               key={`link=${idx}`}
               href={navItem.link || ""}
               className={cn(
-                "relative flex items-center space-x-1 text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300",
+                "relative flex items-center  text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300",
               )}
             >
               <span className="block text-lg sm:hidden">{navItem.icon}</span>
