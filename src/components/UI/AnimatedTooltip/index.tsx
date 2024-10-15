@@ -73,7 +73,9 @@ export const AnimatedTooltip = ({
             </motion.div>
           </AnimatePresence>
         )}
-        <div className={`rounded-full bg-black/95 p-5`}>
+        <div
+          className={`grid size-20 place-items-center rounded-full bg-black/95`}
+        >
           <span className={`text-3xl md:text-5xl`}>{item.icon}</span>
         </div>
       </div>
