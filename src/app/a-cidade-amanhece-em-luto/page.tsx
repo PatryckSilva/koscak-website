@@ -1,8 +1,10 @@
+import { Tbook } from "@/@types";
 import IncentivationBar from "@/components/layout/Home/IncentivationBar";
 import { PolitcaText } from "@/components/layout/Home/Politica";
 import StartingFrame from "@/components/layout/Home/StartingFrame";
 import { TestimonialsFrame } from "@/components/layout/Home/TestimonialsFrame";
 import { VideoFrame } from "@/components/layout/Home/VideoFrame";
+import { bookLinks } from "@/utils/constants";
 import { Metadata, NextPage } from "next";
 
 export const metadata: Metadata = {
@@ -11,7 +13,8 @@ export const metadata: Metadata = {
 };
 
 const aCidadeAmanheceEmLuto: NextPage = () => {
-  const book = {
+  const book: Tbook = {
+    id: 1,
     title: "A cidade amanhece em luto",
     description: (
       <>
@@ -27,8 +30,10 @@ const aCidadeAmanheceEmLuto: NextPage = () => {
         </span>
       </>
     ),
-    link: "",
-    image: "/images/book.webp",
+    link: {
+      ebook: bookLinks.secondBook.ebook,
+    },
+    image: "/images/book2.webp",
   };
   return (
     <>

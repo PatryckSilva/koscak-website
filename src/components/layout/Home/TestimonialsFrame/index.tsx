@@ -16,7 +16,7 @@ export const TestimonialsFrame = () => {
 
         <span className="w-[350px] text-center text-base text-[#BCC6D0] md:text-lg xl:text-left">
           O que os leitores estão compartilhando sobre a magia e o impacto desta
-          história
+          história.
         </span>
 
         <TestimonialsFrameButtons />

@@ -74,7 +74,7 @@ const CarouselCard = ({ item }: any) => {
       key={item.id}
       className={`flex h-[350px] w-[350px] flex-col items-start justify-start gap-5 rounded-2xl bg-main_blue-950/80 p-5 bg-grid-small-black/[0.2] dark:bg-grid-small-white/[0.2]`}
     >
-      <div className={`flex items-center gap-2`}>
+      <div className={`flex items-center gap-4`}>
         <figure className={`relative size-12 overflow-hidden rounded-full`}>
           <Image alt={item.nome} src={item.photo} width={48} height={48} />
         </figure>
@@ -82,9 +82,7 @@ const CarouselCard = ({ item }: any) => {
           <span className={`font-bold text-white`}>{item.nome}</span>
         </aside>
       </div>
-      <span
-        className={`h-[174px] text-[#cfdae4] ${item.id === 0 ? "text-xs" : "text-sm"}`}
-      >
+      <span className={`h-[174px] text-xs text-[#cfdae4]`}>
         {item.depoimento}
       </span>
     </div>

@@ -10,8 +10,13 @@ export const contactFormSchema = z.object({
 export type TcontactFormSchema = z.infer<typeof contactFormSchema>;
 
 export type Tbook = {
+  id: number;
   title: string;
   description: JSX.Element;
-  link: string;
+  link: {
+    physical?: string;
+    ebook?: string;
+    both?: string;
+  };
   image: string;
 };

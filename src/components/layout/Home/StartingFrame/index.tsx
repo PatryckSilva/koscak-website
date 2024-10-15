@@ -1,9 +1,10 @@
 import Image from "next/image";
-import { StartingFrameButtons } from "../HomeButtons";
 import { Tbook } from "@/@types";
+import { Button, ButtonOutlined } from "@/components/UI/Buttons";
+import Link from "next/link";
 
 const StartingFrame = ({ book }: { book: Tbook }) => {
-  const { description, link, title, image } = book;
+  const { description, title, image, link } = book;
   return (
     <main className="relative flex min-h-dvh w-full flex-col-reverse items-center justify-center gap-9 bg-white py-20 bg-grid-small-black/[0.2] dark:bg-slate-950 dark:bg-grid-small-white/[0.2] md:min-h-[47rem] md:flex-col md:py-24 lg:flex-row xl:gap-56">
       <article
@@ -19,8 +20,22 @@ const StartingFrame = ({ book }: { book: Tbook }) => {
         >
           {description}
         </section>
-        <StartingFrameButtons />
+
+        <section className={`flex items-center gap-4`}>
+          {link.physical && (
+            <Link href={`${link?.physical}`}>
+              <Button>Compre o livro físico</Button>
+            </Link>
+          )}
+
+          {link.ebook && (
+            <Link href={`${link?.ebook}`}>
+              <ButtonOutlined>Compre o Ebook</ButtonOutlined>
+            </Link>
+          )}
+        </section>
       </article>
+
       <figure className="relative z-[2] h-[283px] w-[200px] shadow-lg shadow-[#1e1d1d] md:h-[428px] md:w-[303px]">
         <Image src={`${image}`} alt={`Capa do livro ${title}`} fill={true} />
       </figure>

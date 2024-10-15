@@ -4,6 +4,7 @@ import { PolitcaText } from "@/components/layout/Home/Politica";
 import StartingFrame from "@/components/layout/Home/StartingFrame";
 import { TestimonialsFrame } from "@/components/layout/Home/TestimonialsFrame";
 import { VideoFrame } from "@/components/layout/Home/VideoFrame";
+import { bookLinks } from "@/utils/constants";
 import { Metadata, NextPage } from "next";
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 
 const Home: NextPage = () => {
   const book: Tbook = {
+    id: 0,
     title: "O Homem que Odiava a Verdade",
     description: (
       <>
@@ -27,7 +29,11 @@ const Home: NextPage = () => {
         </span>
       </>
     ),
-    link: "",
+    link: {
+      ebook: bookLinks.firstBook.ebook,
+      both: bookLinks.firstBook.both,
+      physical: bookLinks.firstBook.physical,
+    },
     image: "/images/book.webp",
   };
 
