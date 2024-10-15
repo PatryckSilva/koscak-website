@@ -1,10 +1,20 @@
-import { FloatingNav } from "@/components/UI/NavigationHeader";
+import { THeaderItems } from "@/@types";
+import { FloatingNav } from "@/components/UI/FloatingNav";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 const Header = () => {
-  const navItems = [
+  const navItems: THeaderItems[] = [
     {
-      name: "Home",
-      link: "/",
+      name: "Livros",
+      content: [
+        {
+          name: "O Homem que odiava a verdade",
+          link: "/",
+        },
+        {
+          name: "A Cidade Amanhece em Luto",
+          link: "/a-cidade-amanhece-em-luto",
+        },
+      ],
       icon: <IconHome className="h-5 w-5 text-neutral-500 dark:text-white" />,
     },
     {
@@ -20,6 +30,7 @@ const Header = () => {
       ),
     },
   ];
+
   return (
     <header className=" w-full">
       <FloatingNav navItems={navItems} />

@@ -20,3 +20,14 @@ export type Tbook = {
   };
   image: string;
 };
+
+export type THeaderItems = {
+  name: string;
+  link?: string;
+  icon?: JSX.Element;
+  content?: {
+    name: string;
+    link: string;
+    icon?: JSX.Element;
+  }[];
+};
