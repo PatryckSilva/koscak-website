@@ -1,8 +1,8 @@
 import { FormFrame } from "@/components/layout/Contact/FormFrame.tsx";
 import { Metadata, NextPage } from "next";
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Contact the author of this site!",
+  title: "Contato",
+  description: "Entre em contato com Paulo Isidoro Koscak.",
 };
 const Contact: NextPage = () => {
   return (

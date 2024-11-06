@@ -8,8 +8,8 @@ import { bookLinks } from "@/utils/constants";
 import { Metadata, NextPage } from "next";
 
 export const metadata: Metadata = {
-  title: "Homepage",
-  description: "Welcome to your Next.js site!",
+  title: "A cidade amanhece em luto - Paulo Koscak",
+  description: "Encontre informações sobre o livro de Paulo Isidoro Koscak.",
 };
 
 const aCidadeAmanheceEmLuto: NextPage = () => {

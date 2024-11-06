@@ -2,8 +2,8 @@ import { CardsFrame } from "@/components/layout/About/CardsFrame";
 import { Metadata, NextPage } from "next";
 import Link from "next/link";
 export const metadata: Metadata = {
-  title: "About",
-  description: "Learn more about the author of this site!",
+  title: "Sobre Paulo",
+  description: "Saiba mais sobre o autor Paulo Isidoro Koscak.",
 };
 
 const About: NextPage = () => {
